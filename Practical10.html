@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-7</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+    <style>
+    .h1 {
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 50px;
+    margin-top: -8px;
+}
+
+    .h3 {
+    color: black;
+    text-align: center;
+    
+    }
+    p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding:40px;
+    font-family: 1.8rem;
+    background-color:grey;
+    color:white;
+        }
+
+    .line {
+    background-color: skyblue;
+    text-align: center;
+    height: 100vh;
+    line-height: 100vh;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+
+    .container 
+    {
+    display: flex;
+    width: 800vh;
+    padding: 0px;
+    }
+
+    .circle 
+    {
+    background-color: orangered;
+    border-radius: 50%;
+    height: 320px;
+    width: 320px;
+    margin-right: 40px;
+    margin-left: 20px;
+    padding-right: 0px;
+    }
+    #circle1
+    {
+    background-image: url("images/men_image2.jpg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    #circle2
+    {
+    background-image: url("images/women_image2.jpg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    #circle3
+    {
+    background-image: url("images/men_image1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    #circle4
+    {
+    background-image: url("images/women_image1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+
+
+.square {
+    background-color: grey;
+    color: white;
+    width: 100vh;
+    height: 100vh;
+    text-align: center;
+}
+
+.container2 {
+    
+    display: flex;
+}
+
+
+
+
+#box3 img{
+    width:100%;
+    
+}
+
+.container3 
+{
+    display: inline-flex;
+}
+
+.box {
+    height: 250px;
+    width: 1000px;
+    margin-left: 10px;
+    background-color: grey;
+    color:white;
+    margin-right:40px;
+    border-radius: 20px;
+}
+.header
+        {
+            background-color:black;
+            display:flex;
+            justify-content: center;
+            width:100%;
+            height:60px ;
+
+
+        }
+        .header img{
+            height:50px;
+            width:60px;
+            padding-top: 10px;
+            margin-right: 10px;
+        }
+        .header h1{
+            color:white;
+            line-height:50px;
+
+        }
+
+        .rectangle
+        {
+        background-color: orangered;
+        height: 33vh;
+        width:700px;
+        margin-left: 10px;
+        margin-bottom: 4px;  
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2.0;
+        text-align: center;
+        padding-top: 10px;  
+        }
+        #rectangle1
+        {
+        background-image: url("images/project_image1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+        #rectangle2
+        {
+        background-image: url("images/project_image2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+        #rectangle3
+        {
+        background-image: url("images/project_image3.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+
+        *
+        {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+        }
+        .menu 
+        {
+            background-color: rgba(90, 60, 60, 0.733);
+            width: 25%;
+            height: 100%;
+            position: fixed;
+            left:-100%;
+            transition: 1.5s;
+            margin-top: 60px;
+            
+        }
+      
+        a i
+        {
+            margin-right: 5px;
+        }
+
+body
+{
+background-image: url("images/image_practical_8.jpg");
+background-repeat: no-repeat;
+background-position:center;
+height: 100vh;
+background-size: cover;
+}
+
+
+.box img{
+    width:100%;
+    height:150px;
+
+}
+
+h1{
+color:white;
+font-size:3.5rem;    
+}
+#box1{
+    width:300px;
+    height:400px;
+    overflow:hidden;
+    border: 2px solid green;
+    margin-bottom: 20px;
+    color:rgba(0, 0, 0, 0.671)
+}
+
+#box2{
+    width:300px;
+    height:400px;
+    overflow:hidden;
+    border: 2px solid green;
+    margin-bottom: 20px;
+    color:rgba(0, 0, 0, 0.671)
+}
+#box3
+{
+    width:300px;
+    height:400px;
+    overflow:hidden;
+    border: 2px solid green;
+    margin-bottom: 20px;
+    color:rgba(0, 0, 0, 0.671)
+}
+#box4
+{
+    width:300px;
+    height:400px;
+    overflow:hidden;
+    border: 2px solid green;
+    margin-bottom: 20px;
+    color:rgba(0, 0, 0, 0.671)
+
+}
+.mybutton:hover{
+    background-color:blue;
+}
+.mybutton{
+    background-color: red;
+        border-radius:20px;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        padding:10px;
+
+}
+    .menu ul 
+    {
+            list-style: none;
+        }
+
+        .menu ul li {
+            border-bottom: 2px solid white;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: white
+        }
+
+        .menu ul li a:hover {
+            border-left: 5px solid white;;
+        }
+
+        .show-btn,
+        .hide-btn {
+            font-size: 20px;
+            top: 20px;
+            left: 20px;
+            color: white;
+            position: fixed;
+        }
+        #chk:checked ~ .menu{
+            left:0;
+        }
+        .hide-btn
+        {
+            opacity:0;
+        }
+        .show-btn
+        {
+            top:0;
+            left:0;
+        }
+
+        #chk
+        {
+            opacity: 0;
+        }
+        #chk:checked ~ .show-btn{
+            opacity:0;
+        }
+        #chk:checked ~ .hide-btn{
+            opacity:1;
+            top:0;
+            left:0;
+        }
+        @media(max-width:625px){
+        .menu
+        {
+            width :100%;
+            text-align:center;
+        }
+        .header h1
+        {
+            display: none;
+        }        
+        @media(min-width:600px)
+        {
+            .line{
+                height:100vh;
+                width:70%;
+            }
+        }
+    }
+        @media(max-width:625px)
+        {
+            .menu
+            {
+                width :100%;
+                text-align:center;
+            }
+            .header h1
+            {
+                display: none;
+            }
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="header">
+        <input type="checkbox" id="chk" />
+        <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i></label>
+        <label for="chk" class="hide-btn">
+        <i class="fa fa-times"></i></label>
+        <img src="images/img_nav_bar.jpg">
+        <h1>Full Stack </h1>
+    
+    <div class="menu">
+
+        <ul>
+            <li><a href="#e"><i class="fa fa-home"><span>Home</span></i></a></li>
+            <li><a href="#a"><i class="fa fa-user"><span>About us</span></i></a></li>
+            <li><a href="#b"><i class="fa fa-tasks"><span>Services</span></i></a></li>
+            <li><a href="#c"><i class="fa fa-rss"><span>Blog</span></i></a></li>
+            <li><a href="#d"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="line">
+        <img src="/images/image_practical_8.jpg">
+
+    </div>
+        <h3 style="font-size: 25px; padding: 15px;">TEAM MEMBERS</h3>
+        <div class="container" id="b">
+        <div class="circle" id="circle1"></div>
+        <div class="circle" id="circle2"></div>
+        <div class="circle" id="circle3"></div>
+        <div class="circle" id="circle4"></div>
+    </div>
+    <h3 style="font-size: 25px; padding: 15px;">ABOUT US</h3>
+    
+
+    <div class="container2" id="a">
+        <div class="square">
+            <h2>About projects</h2>
+            <p>>JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.
+
+        This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about API specifics to Web pages, please see Web APIs and DOM.
+        HyperText Markup Language (HTML) is the set of markup symbols or codes inserted into a file intended 
+        for display on the Internet. The markup tells web browsers how to display a web page's words and images.
+
+        Each individual piece markup code (which would fall between "<" and ">" characters) is referred to as 
+        an element, though many people also refer to it as a tag. Some elements come in pairs that indicate when
+        some display effect is to begin and when it is to end
+        Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+
+        CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3] This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting
+        Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
+
+        As of August 2021, Bootstrap is the tenth most starred project on GitHub, with over 152,000 stars, behind freeCodeCamp (over 328,000 stars), Vue.js framework, React library, TensorFlow and others.
+        HyperText Markup Language (HTML) is the set of markup symbols or codes inserted into a file intended 
+        for display on the Internet. The markup tells web browsers how to display a web page's words and images.
+
+        Each individual piece markup code (which would fall between "<" and ">" characters) is referred to as 
+        an element, though many people also refer to it as a tag. Some elements come in pairs that indicate when
+        some display effect is to begin and when it is to end.
+    </div>
+        <div class="articles">        
+            <div class="rectangle" id="rectangle1"><b>PROJECT-1</b></div>
+            <div class="rectangle" id="rectangle2"><b>PROJECT-2</b></div>
+            <div class="rectangle" id="rectangle3"><b>PROJECT-3</b></div>
+        </div>
+    </div>
+    <h3 style="font-size: 25px; padding: 15px;">TECHNOLOGIES USED</h3>
+    <div class="container3" id="c">
+        <div class="box" id="box1">
+            <img src="/images/Introduction-to-HTML-2.jpg" alt="">
+
+            <h3>Introduction to HTML</h3>
+            <p>HyperText Markup Language (HTML) is the set of markup symbols or.
+            </p>
+            <div class ="mybutton">
+            <a href="Html_decript.html" style="text-decoration: none ;color:white;background-color: red;padding:5px;border-radius:20px;
+            width:100%;
+            display:flex;justify-content: center;">Read More</a>
+            </div>
+        </div>
+        <div class="box" id="box2">
+            <img src="/images/javascript-image.png" alt="">
+        <h3>Introduction to Javascript</h3>
+        <p>JavaScript (JS) is a lightweight, interpreted, or just-in-time .
+        </p><div class ="mybutton">
+            <a href="Javascript_descript.html" style="text-decoration: none ;color:white;background-color: red;padding:5px;border-radius:20px;
+            width:100%;
+            display:flex;justify-content: center;">Read More</a>
+            </div>
+        </div>
+        <div class="box" id="box3">
+            <img src="/images/css_image.jpg" alt="">
+        <h3>Introduction to CSS</h3>
+        <p>Cascading Style Sheets (CSS) is a style sheet language used</p>
+        <div class ="mybutton">
+            <a href="Css_descript.html" style="text-decoration: none ;color:white;background-color:red;padding:5px;border-radius:20px;
+            width:100%;
+            display:flex;justify-content: center;">Read More</a>
+            </div>
+        </div>
+        <div class="box" id="box4">
+            <img src="/images/What is bootstrap.jpg" alt="">
+            <h3>Introduction to Bootstrap</h3>
+            <p>Bootstrap is a free and open-source CSS framework directed at .
+            </p>
+            <div class ="mybutton">
+                <a href="Bootstrap_descript.html" style="text-decoration: none ;color:white;background-color: red;padding:5px;border-radius:20px;
+                width:100%;
+                display:flex;justify-content: center;">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="container4" id="d">
+    <h2 style="font-size: 25px; padding: 15px;text-align: center;">Contact</h2>
+    <h4 style=background-color:pink;padding:20px;color:black;text-align:center;>Website Template for Practical-8<a href="https://vanijain007.github.io/Fullstack_practical2021/"> click to live on github</a>
+    </h4>
+
+    </div>
+    
+
+</body>
+</html>
