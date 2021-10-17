@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-14</title>
+</head>
+<style>
+    *
+    {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+        display:grid;
+        place-items: center;
+        height:100vh;
+        background-color: grey;
+        padding: 0;
+        margin: 0;
+    }
+    #container
+    {
+        height:400px;
+        width:400px;
+        background-color: white;
+        position:relative;
+        text-align: center;
+        font-size: 25px;
+    }
+    h1{
+        top:30%;
+        left:45%;
+        color:greenyellow;
+        position:absolute;
+    }
+    #buttons
+    {
+        height:120px;
+        width:30px;
+        bottom:8%;
+        left:70px;
+        position:absolute;
+    }
+    #buttons button{
+        height:70px;
+        width:70px;
+        background-color:greenyellow;
+        outline: none;
+    }
+    #increment
+    {
+        right:0;
+        left:200px;
+        top:-1px;
+        position:absolute;
+        font-size: 30px;
+    }
+    #decrement
+    {
+        font-size:30px ;
+    }
+    h2{
+        font-size: 40px;
+    }
+
+
+
+</style>
+<body>
+    <div id="container">
+    <h2>COUNTER</h2>
+    <h1 id="counterValue">0</h1>
+    <div id="buttons">
+        <button id="decrement">-</button>
+        <button id="increment">+</button>
+    </div>
+    </div>
+    <script src="./js/counter.js"></script>
+</body>
+</html>
