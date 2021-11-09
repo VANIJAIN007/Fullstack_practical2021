@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        h2 
+        {
+            padding-top: 40vh;
+            padding-left: 50px;
+            color: white;
+            font-size: 45px;
+            
+        }
+
+        p {
+            color: white;
+            font-size: 25px;
+            margin: 45px;
+
+        }
+
+        h1 {
+            color: rgb(0, 124, 128);
+            padding-top: 100px;
+            margin-bottom: 30px;
+
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .content {
+            background-color: rgba(0, 128, 111, 0.664);
+            height: 100vh;
+            width: 30%;
+
+        }
+
+
+        .create_account .icons i
+        {
+            color:black;
+        }
+        .icons{
+            text-decoration: none;
+        }
+        
+        #icon1
+        {
+            text-decoration: none;
+        }
+        
+
+        .create_account {
+            padding-left: 100%;
+
+        }
+
+        input[type=text] {
+            padding: 10px;
+            width: 300px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+
+
+        }
+
+        input[type=password1] {
+            padding: 10px;
+            width: 300px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .buttons #insert {
+            padding: 10px;
+            margin-top: 10px;
+            width: 325px;
+            background-color: rgba(0, 128, 111, 0.664);
+
+        }
+        @media(max-width:610px)
+        {
+            .content{
+                display: none;
+            }
+            .create_account
+            {
+                margin-left: -160px;
+                width: 100%;
+            }
+        }
+        @media(max-width:800px)
+        {
+            .content p {
+                display: none;
+            }
+            .content h2{
+                margin-left: -40px;
+            }
+            .create_account
+            {
+                margin-left: -150px;
+            }
+        }
+        @media(max-width:1100px)
+        {
+            .create_account
+            {
+                margin-left:-125px;
+            }
+        }
+        @media(max-width:450px)
+        {
+            .create_account
+            {
+                margin-left: -160px;
+            }
+            .content h2{
+                margin-left: -40px;
+            }
+        }
+        @media(max-width:405px)
+        {
+            .create_account
+            {
+                margin-left: -180px;
+            }
+        }
+        @media(max-width:370px)
+        {
+            .buttons #insert
+            {
+                width:100px;
+                height:40px;
+            }
+            input[type=text]
+            {
+                width:50px;
+            }
+            input[type=password]
+            {
+                display: none;
+            }
+
+        }
+            
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h2>Welcome!</h2>
+            <p>To keep connected with us please login <nbsp></nbsp>with your personal info...</p>
+        </div>
+        <div>
+            <div class="create_account">
+                <h1>LOGIN</h1>
+                <div class="icons" id="icon1">
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </div>
+                <div class="icons" id="icon2">
+                    <a href="https://developers.google.com/web/showcase/2015/googleplus"><i class="fa fa-google-plus"
+                            aria-hidden="true"></i></a>
+                </div>
+                <div class="icons" id="icon3">
+                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+                <form action="./FullStack_Project1a.html">
+                    <label for="txt1"><i class="fa fa-user">Name</label></i>
+                    <input type="text" id="txt1" name="a" placeholder="candidate name" required /><br>
+                    <label for="txt2"><i class="fa fa-envelope"> Email</label></i>
+                    <input type="text" id="txt2" name="b" placeholder="hs09301@gmail.com" required /><br>
+                    <label for="password"><i class="fa fa-lock"> Password</label></i>
+                    <input type="password1" id="password" name="pass" required /><br>
+                    <h4>forget password?</h4>
+                    <div class="buttons">
+                        <button id="insert" onclick="login()">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+      <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+      <script src="./firebasecon.js"></script>
+      <script src="./crudproj.js"></script>
+
+
+</body>
+
+</html>
+
+</html>

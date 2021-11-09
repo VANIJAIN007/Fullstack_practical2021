@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-7</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        * 
+        {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .header {
+            background-color: black;
+            height: 9vh;
+            display: flex;
+            position: relative;
+        }
+
+        img {
+            width: 70px;
+            height: 5vh;
+            margin-left: 70px;
+            line-height: 4vh;
+            margin-top: 10px;
+        }
+
+        .header p {
+            color: white;
+        }
+
+        input[type="search"] {
+            margin-top: 20px;
+            margin-left: 70px;
+            width: 150%;
+            padding: 7px;
+            font-size: 20px;
+        }
+
+        .content h1 {
+            text-align: center;
+        }
+
+        .content li {
+            list-style: none;
+            margin-left: 20px;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .content h1 ul {
+            display: inline-flex;
+        }
+        p
+        {
+            color: white;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+        .header i {
+            color: white;
+        }
+        .menu {
+            background-color: rgba(90, 60, 60, 0.733);
+            width: 25%;
+            height: 100%;
+            position: fixed;
+            left: -100%;
+            transition: 1.5s;
+            margin-top: 60px;
+
+        }
+
+        .menu ul {
+            list-style: none;
+        }
+
+        .menu ul li {
+            border-bottom: 2px solid white;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: white
+        }
+
+        .menu ul li a:hover {
+            border-left: 5px solid white;
+        }
+
+        .show-btn,
+        .hide-btn {
+            font-size: 20px;
+            top: 20px;
+            left: 20px;
+            color: rgb(128, 119, 119);
+            position: fixed;
+        }
+
+        #chk:checked~.menu {
+            left: 0;
+        }
+        .container2
+        {
+            position:absolute;
+            left:150px;
+            top:50px;
+        }
+
+
+        #chk:checked~.boxes {
+            float: right;
+        }
+
+        .hide-btn {
+            opacity: 0;
+        }
+
+        .show-btn {
+            top: 0;
+            left: 0;
+        }
+
+        #chk {
+            opacity: 0;
+        }
+
+        #chk:checked~.show-btn {
+            opacity: 0;
+        }
+
+        #chk:checked~.hide-btn {
+            opacity: 1;
+            top: 0;
+            left: 0;
+        }
+
+        #boxes1 {
+            height: 500px;
+            width: 450px;
+            background-image: linear-gradient(white, black);
+            text-align: center;
+            font-size: 15px;
+            margin-top: 50px;
+            margin-left: 100px;
+
+        }
+
+        #boxes3 {
+            height: 500px;
+            width: 450px;
+            background-image: linear-gradient(white, black);
+            text-align: center;
+            font-size: 15px;
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+
+        #boxes2 {
+            height: 500px;
+            width: 450px;
+            background-image: linear-gradient(white, black);
+            text-align: center;
+            font-size: 15px;
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+
+        #boxes4 {
+            height: 500px;
+            width: 450px;
+            background-image: linear-gradient(white, black);
+            text-align: center;
+            font-size: 15px;
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+
+        table,
+        tr,
+        td {
+            margin-top: 15px;
+            text-align: center;
+            margin-left: 35px;
+
+        }
+
+        #table1 td {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 15px;
+            color: brown;
+        }
+
+        #table2 td {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 15px;
+            color: brown;
+        }
+
+        #table3 td {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 15px;
+            color: brown
+        }
+
+        #table4 td {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 15px;
+            color: brown;
+        }
+
+        a {
+            text-decoration: none;
+            color: darkblue;
+
+        }
+
+        a:hover {
+            color: rgb(50, 68, 31);
+        }
+
+        #button1 {
+            border: 2px solid red;
+            margin-top: 20px;
+            background-color: orange;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        #button2 {
+            border: 2px solid red;
+            margin-top: 20px;
+            background-color: rgb(180, 121, 43);
+            margin-left: 30px;
+            margin-right: 30px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .img1 {
+            display: flex;
+        }
+
+        .img1 img {
+            height: 200px;
+            width: 200px;
+            margin-top: 100px;
+        }
+
+        .img1 {
+            position: relative;
+        }
+
+        .img2 {
+            display: flex;
+        }
+
+        .img2 img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .img3 {
+            display: flex;
+
+        }
+
+        .img3 img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .img4 {
+            display: flex;
+
+        }
+
+        .img4 img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .block1,
+        .block2,
+        .block3,
+        .block4,
+        .block5,
+        .block6,
+        .block7,
+        .block8,
+        .block9,
+        .block10 {
+            height: 100px;
+            width: 50px;
+            margin-right: 8px;
+            margin-top: 10px;
+            flex-direction: row;
+            margin-left: 20px;
+        }
+
+        .blocks img {
+            height: 100%;
+            width: 100%;
+            border: 2px solid black;
+
+        }
+
+        .blocks2 img {
+            height: 100%;
+            width: 100%;
+            border: 2px solid black;
+
+        }
+
+        .blocks3 img {
+            height: 100%;
+            width: 100%;
+            border: 2px solid black;
+
+        }
+
+        .blocks4 img {
+            height: 100%;
+            width: 100%;
+            border: 2px solid black;
+
+        }
+
+        #block1 img {
+            object-fit: contain;
+        }
+
+        /*
+        @media(max-width:680px) {
+            .header {
+                width: 100%;
+            }
+
+            .header p {
+                display: none;
+            }
+
+            .search {
+                margin-left: -40px;
+            }
+
+            .menu~.checked {
+                opacity:1;
+
+            }
+
+            .menu li {
+                text-align: center;
+                list-style: none;
+            }
+
+            img {                 
+                display: none;
+            }
+
+            
+
+        }
+        */
+
+        @media(max-width:800px) {
+            #boxes1 {
+                height: 650px;
+                width: 360px;
+                background-image: linear-gradient(white, black);
+                text-align: center;
+                font-size: 15px;
+                margin-top: 50px;
+                margin-left: 35px;
+            }
+            #boxes2 {
+                height: 650px;
+                width: 360px;
+                background-image: linear-gradient(white, black);
+                text-align: center;
+                font-size: 15px;
+                margin-top: 50px;
+                margin-left: 35px;
+            }
+            #boxes3 {
+                height: 650px;
+                width: 360px;
+                background-image: linear-gradient(white, black);
+                text-align: center;
+                font-size: 15px;
+                margin-top: 50px;
+                margin-left: 35px;
+            }
+            
+            #boxes4 {
+                height: 600px;
+                width: 360px;
+                background-image: linear-gradient(white, black);
+                text-align: center;
+                font-size: 15px;
+                margin-top: 50px;
+                margin-left: 35px;
+            }
+            .content h1{
+                margin-left: 30px;;
+                text-align: center;
+            }
+
+            .content ul {
+                display: none;
+            };
+        }
+
+        @media(max-width:700px) {
+               #boxes1{
+                height: 600px;
+                width: 400px;
+                text-align: center;
+                font-size: 15px;
+                margin-top: 50px;
+                margin-left: -80px;
+                background-image: url("./images/boss_earpods.jpg"), linear-gradient(white, black);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                box-shadow: 2px 5px;
+            }
+            #boxes3 {
+                height: 600px;
+                width: 400px;
+                background-repeat: no-repeat;
+                text-align: center;
+                font-size: 15px;
+                margin-top: 50px;
+                margin-left: -80px;
+                background-size: 100%;
+                background-image: url("./images/boat_image.jpg"), linear-gradient(white, black);
+                box-shadow: 2px 5px;
+            }
+            .content h1
+            {
+                text-align: center;
+                display:inline-flex;
+            }
+            #boxes2 {
+                height: 600px;
+                width: 400px;
+                text-align: center;
+                font-size: 15px;
+                margin-top: 50px;
+                margin-left: -80px;
+                background-size: 100%;
+                background-image: url("./images/apple_ipods_image.jpg"), linear-gradient(white, black);
+                background-repeat: no-repeat;
+                box-shadow: 2px 5px;
+            }
+            .header img,p,.search{
+                display: none;
+            }
+            
+            .img1 img {
+                display: none;
+            }
+            .content ul li a{
+                display: none;
+            }
+            .icona i {
+                display: none;
+            }
+            .img2 img {
+                display: none;
+            } 
+            .img3 img {
+                display: none;
+            }
+            .img4 img {
+                display: none;
+            }  
+            #boxes4{
+                height: 600px;
+                width: 400px;
+                text-align: center;
+                font-size: 15px;
+                margin-top: 50px;
+                margin-left: -80px;
+                background-image: url("./images/sony_image.jpg"), linear-gradient(white, black);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                box-shadow: 2px 5px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <input type="checkbox" id="chk" />
+            <label for="chk" class="show-btn"><i class="fa fa-bars"></i></label>
+            <label for="chk" class="hide-btn"><i class="fa fa-times"></i></label>
+            <img src="./images/flossy_cream_image.png" alt="">
+            <p><i class="fa fa-search-location"></i>delivery location</p>
+
+            <div class="search">
+                <input type="search" id="sea" placeholder="Search" />
+
+            </div>
+            <div><p style=color:white;margin-left:300px;font-size:35px;text-align:center>Sale20%off</p>
+            </div>
+            <img src="./images/headphones_header.jpg" alt="">
+            <p style=color:white;margin-left:50px;font-size:15px;text-align:center><a href="./loginpage.html" style=color:white;>Hello,Signin<br><b>Accounts</b></a></p>
+            <p style=color:white;margin-left:30px;>Return and Orders</p>
+            <div class="icona">
+            <i class="fa fa-shopping-cart" style=color:white;font-size:35px;margin-top:20px;margin-left:100px;></i>
+            </div>
+            
+            <div class="menu">
+                <ul>
+                    <li><a href="#e"><i class="fa fa-home"><span>Home</span></i></a></li>
+                    <li><a href="#a"><i class="fa fa-user"><span>About us</span></i></a></li>
+                    <li><a href="#b"><i class="fa fa-tasks"><span>Services</span></i></a></li>
+                    <li><a href="#c"><i class="fa fa-rss"><span>Blog</span></i></a></li>
+                    <li><a href="./practical_class.html"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="container2">
+        <div class="content">
+            <h1 style=margin-top:20px;font-size:50px;color:black;background-image:linear-gradient(white,black);>
+                Earphones
+                <ul>
+                    <li><a href="#boxes4">Sony</a></li>
+                    <li><a href="#boxes1">Bose</a></li>
+                    <li><a href="#boxes3">Boat</a></li>
+                    <li><a href="#boxes2">Apple</a></li>
+                </ul>
+            </h1>
+        </div>
+        <div class="img1">
+            <div class="boxes" id="boxes1">
+                <h2>Bose Sport Truly Wireless Bluetooth in Ear Earphone with Mic (Glacier White) </h2>
+                <table id="table1">
+                    <tr>
+                        <td>BRAND</td>
+                        <td>Bose</td>
+                    </tr>
+                    <tr>
+                        <td>COLOR</td>
+                        <td>Glacier White</td>
+                    </tr>
+                    <tr>
+                        <td>CONNECTOR TYPE</td>
+                        <td>Wireless</td>
+                    </tr>
+                    <tr>
+                        <td>MODEL NAME</td>
+                        <td>Bose Sports Earbuds</td>
+                    </tr>
+                </table>
+                <h3>About this item</h3>
+                <p style=color:brown;font-size:18px;margin-left:8px;>Secure and comfortable earbuds—customise your
+                    fit with the included 3 sizes of StayHear </p>
+                <a href="./GlacierWhite.html">See more product<br> details</a>
+                <div class="mybutton" id="button1">
+                    <h2>ADD TO CART</h2>
+                </div>
+                <div class="mybutton" id="button2">
+                    <h2>BUY NOW</h2>
+                </div>
+            </div>
+            <img src="./images/boss_earpods.jpg" alt="">
+            <iframe src="" frameborder="1" name="myframe1" width="400px" height="400px" margin-top="10px";></iframe>
+
+            <div class="wrapper">
+
+                <div class="blocks block1"><a href="./images/boss_earpods.jpg" target="myframe1"><img src="./images/boss_earpods.jpg" alt=""></a></div>
+                <div class="blocks block2"><a href="./images/bose_image2.jpg" target="myframe1"><img src="./images/bose_image2.jpg" alt=""></a></div>
+
+            </div>
+
+
+        </div>
+        <div class="img2">
+            <div class="boxes" id="boxes2">
+                <h2>Apple Airpods In-Ear Truly Wireless Earbuds with Mic (Bluetooth 5.0, Charging Case)
+                </h2>
+                <table id="table2">
+                    <tr>
+                        <td>COMPATIBLE DEVICES</td>
+                        <td>Apple</td>
+                    </tr>
+                    <tr>
+                        <td>FORM FACTOR</td>
+                        <td>In ear</td>
+                    </tr>
+                    <tr>
+                        <td>BRAND</td>
+                        <td>Apple</td>
+                    </tr>
+                    <tr>
+                        <td>COLOR</td>
+                        <td>White</td>
+                    </tr>
+                    <tr>
+                        <td>SPECIAL FEATURE</td>
+                        <td>Noise Cancelling</td>
+                    </tr>
+                </table>
+                <h3>About this item</h3>
+                <p style=color:brown;font-size:18px;margin-left:8px;> Active noise cancellation for immersive sound
+                    Transparency mode for hearing and connecting with the world around you </p>
+                <a href="./Apple_earpods.html">See more product<br> details</a>
+                <div class="mybutton" id="button1">
+                    <h2>ADD TO CART</h2>
+                </div>
+                <div class="mybutton" id="button2">
+                    <h2>BUY NOW</h2>
+                </div>
+            </div>
+            <img src="./images/apple_sub_parts.jpg" alt="">
+            <iframe src="" frameborder="1" name="myframe2" width="400" height="400px"></iframe>
+            <div class="wrapper1">
+                <div class="blocks2 block5"><a href="./images/apple_ipods_image.jpg" target="myframe2"><img src="./images/apple_ipods_image.jpg" alt=""></a></div>
+                <div class="blocks2 block6"><a href="./images/apple_sub_parts_2.jpg" target="myframe2"><img src="./images/apple_sub_parts_2.jpg" alt=""></a></div>
+
+            </div>
+
+
+        </div>
+        <div class="img3">
+            <div class="boxes" id="boxes3">
+                <h2>boAt Airdopes 511V2 TWS Ear-Buds with IWP Technology</h2>
+                <table id="table3">
+                    <tr>
+                        <td>COMPATIBLE DEVICES</td>
+                        <td>Android</td>
+                    </tr>
+                    <tr>
+                        <td>FORM FACTOR</td>
+                        <td>In ear</td>
+                    </tr>
+                    <tr>
+                        <td>BRAND</td>
+                        <td>Boat</td>
+                    </tr>
+                    <tr>
+                        <td>COLOR</td>
+                        <td>Black</td>
+                    </tr>
+                    <tr>
+                        <td>SPECIAL FEATURE</td>
+                        <td>Noise Cancelling</td>
+                    </tr>
+                </table>
+                <h3>About this item</h3>
+                <p style=color:brown;font-size:18px;margin-left:8px;>
+                    Battery: Airdopes 511v2 offers a playback time of up to 6 hours in earbuds & 24 hours in
+                    charging
+                    case
+                    Bluetooth: </p>
+                <a href="./boat_earpods.html">See more product<br> details</a>
+                <div class="mybutton" id="button1">
+                    <h2>ADD TO CART</h2>
+                </div>
+                <div class="mybutton" id="button2">
+                    <h2>BUY NOW</h2>
+                </div>
+            </div>
+            <img src="./images/boat_image.jpg" alt="">
+            <iframe src="" frameborder="1" name="myframe" width="400" height="400px"></iframe>
+           
+
+            <div class="wrapper2">
+            <div class="blocks3 block7"><a href="./images/boad_subparts_image.jpg" target="myframe"><img src="./images/boad_subparts_image.jpg" alt="" ></a></div>
+            <div class="blocks3 block8"><a href="./images/boat_image.jpg" target="myframe"><img src="./images/boat_image.jpg" alt=""></a></div>
+            </div>
+
+        </div>
+        <div class="img4">
+            <div class="boxes" id="boxes4">
+                <h2>Sony WF-XB700 Extra Bass True Wireless (TWS) Bluetooth Earbuds
+                </h2>
+                <table id="table4">
+                    <tr>
+                        <td>BRAND</td>
+                        <td>Sony</td>
+                    </tr>
+                    <tr>
+                        <td>COLOUR</td>
+                        <td>Blue</td>
+                    </tr>
+                    <tr>
+                        <td>CONNECTOR TYPE</td>
+                        <td>Wireless</td>
+                    </tr>
+                    <tr>
+                        <td>MODEL NAME</td>
+                        <td>Headphones</td>
+                    </tr>
+                    <tr>
+                        <td>FORM FACTOR</td>
+                        <td>In Ear</td>
+                    </tr>
+                </table>
+                <h3>About this item</h3>
+                <p style=color:brown;font-size:18px;margin-left:8px;>
+                    Easy Operations: The buttons on the headphones lets you play, stop, skip through tracks and
+                    adjust
+                    the
+                    volume </p>
+                <a href="./sony_earpods.html">See more product<br> details</a>
+                <div class="mybutton" id="button1">
+                    <h2>ADD TO CART</h2>
+                </div>
+                <div class="mybutton" id="button2">
+                    <h2>BUY NOW</h2>
+                </div>
+            </div>
+            <img src="./images/sony_image.jpg" alt="">
+            <iframe src="" frameborder="1" name="myframe4" width="400" height="400px"></iframe>
+            <div class="wrapper1">
+                <div class="blocks4 block9"><a href="./images/sony_image_subparts.jpg" target="myframe4"><img src="./images/sony_image_subparts.jpg" alt=""></a></div>
+                <div class="blocks4 block10"><a href="./images/sony_image.jpg" target="myframe4"><img src="./images/sony_image.jpg" alt=""></a></div>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="./fullStackProject.js"></script>
+</body>
+
+</html>
