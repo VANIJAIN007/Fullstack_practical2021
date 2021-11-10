@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<style>
+    *
+    {
+        padding:0;
+        margin:0;
+    }
+    h1
+    {
+        color:grey;
+        text-align:center;
+        padding:20px;
+    }
+    h2
+    {
+        color:white;
+        padding:10px;
+    }
+    p{
+        color:grey;
+        padding:10px;
+        
+
+    }
+    .container
+    {
+        background-color:black;
+        display:flex;
+        height:40vh;
+    }
+    .about
+    {
+        padding:10px;
+        width:40%;
+    }
+
+    .categories
+    {
+        padding:10px;
+        width:20%;
+        margin-left: 60px;;
+    }
+    li{
+        color:grey;
+        list-style:none;
+        padding:7px;
+    }
+    .quick_links
+    {
+        padding:10px;
+        width:20%;
+        margin-left:60px;
+    }
+    .Contact_us
+    {
+        padding:10px;
+        width:30%;
+        margin-left:60px;
+    }
+    .Registration
+    {
+        border-top: grey;
+        color:grey;
+        display: inline-flex;
+    }
+    .container2
+    {
+        background-color: black;
+        height:18.3vh;
+    }
+    .Registration
+    {
+        border-top:2px solid grey;
+        border-bottom:2px solid grey;
+        width:100%;
+    }
+    .mybutton
+    {
+        border-radius: 60px;
+        background-color: red;
+        width:10%;
+        padding:10px;
+        height: 7vh;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        justify-items: center;
+        text-align: center;
+
+    }
+    .mybutton a
+    {
+        color:white;
+        text-decoration:none;
+        line-height:7vh;
+        font-size:20px;
+        padding-top: 10px;
+        
+    }
+    .Registration h1
+    {
+        text-align: center;
+        padding:50px;
+        margin-left: 500px;
+    }
+    .container3 a i
+    {
+        padding:30px;
+        border-radius:50%;
+        background-color: grey;
+        color:white;
+        font-size: 25px;
+
+    }
+    .container3
+    {
+        background-color: black;
+        height:20vh;
+        display:flex;
+        padding-left: 500px;;
+    }
+    .icons
+    {
+        padding-top: 28px;
+        padding-left:30px;
+    }
+    #icon1 i:hover
+    {
+        background-color:rgba(0, 0, 255, 0.699);
+    }
+    #icon2 i:hover{
+        background-color: rgb(73, 120, 207);
+    }
+    #icon3 i:hover{
+        background-color: rgb(255, 38, 0);
+    }
+    #icon4 i:hover{
+        background-color:rgb(0, 110, 255);
+    }
+    .container4 p
+    {
+        color:grey;
+        text-align: center;
+        justify-content: center;
+        padding-top:33px;
+    }
+    .container4
+    {
+        background-color:black;
+        height:12.1vh;
+        display: flex;
+        text-align: center;
+    }
+
+   .copyright
+   {
+        display:flex;
+        border-top: 2px solid grey;
+        width:100%;
+   }
+   .container4 p{
+       margin-left:620px;
+   }
+   .container4 a{
+        color:white;
+        text-decoration: none;
+        margin-left: 4px;
+   }
+   @media(max-width:1112px)
+   {
+    *
+    {
+        padding:0;
+        margin:0;
+    }
+    h1
+    {
+        color:grey;
+        text-align: center;
+        padding:20px;
+    }
+    h2
+    {
+        color:white;
+        padding:10px;
+    }
+    p
+    {
+        color:grey;
+        padding:10px;
+    }
+    .container
+    {
+        background-color:black;
+        display:flex;
+        height:100vh;
+        flex-wrap: wrap;
+    }
+    .about
+    {
+        padding:10px;
+        width:40%;
+    }
+
+    .categories
+    {
+        padding:10px;
+        width:20%;
+        margin-left: 60px;;
+    }
+    li{
+        color:grey;
+        list-style:none;
+        padding:7px;
+    }
+    .quick_links
+    {
+        padding:10px;
+        width:20%;
+        margin-left:60px;
+    }
+    .Contact_us
+    {
+        padding:10px;
+        width:30%;
+        margin-left:60px;
+    }
+    .Registration
+    {
+        flex-wrap: wrap;
+        border-top: grey;
+        height:36vh;
+        color:grey;
+    }
+    .container2
+    {
+        background-color: black;
+        height:18.3vh;
+        flex-wrap: wrap;
+        width:100%;
+        height:36vh;
+    }
+    .Registration
+    {
+        border-top:2px solid grey;
+        border-bottom:2px solid grey;
+        flex-wrap: wrap;
+        width:100%;
+        height:36vh;
+
+    }
+    .mybutton
+    {
+        border-radius: 60px;
+        background-color: red;
+        width:10%;
+        padding:10px;
+        height: 7vh;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        justify-items: center;
+        text-align: center;
+    }
+    .mybutton a
+    {
+        color:white;
+        text-decoration:none;
+        line-height:7vh;
+        font-size:20px;
+        padding-top: 10px;
+    }
+    .Registration h1
+    {
+        text-align: center;
+        padding:50px;
+        margin-left:500px;
+    }
+    .container3 a i
+    {
+        padding:30px;
+        border-radius:50%;
+        background-color: grey;
+        color:white;
+        font-size: 25px;
+
+    }
+    .container3
+    {
+        background-color: black;
+        height:20vh;
+        flex-wrap: wrap;
+        padding-left: 500px;
+        height:50vh;
+    }
+    .icons
+    {
+        padding-top: 28px;
+        padding-left:30px;
+    }
+    #icon1 i:hover
+    {
+        background-color:rgba(0, 0, 255, 0.699);
+    }
+    #icon2 i:hover{
+        background-color: rgb(73, 120, 207);
+    }
+    #icon3 i:hover{
+        background-color: rgb(255, 38, 0);
+    }
+    #icon4 i:hover{
+        background-color:rgb(0, 110, 255);
+    }
+    .container4 p
+    {
+        color:grey;
+        text-align: center;
+        justify-content: center;
+        padding-top:33px;
+    }
+    .container4
+    {
+        background-color:black;
+        height:12.1vh;
+        display: flex;
+        text-align: center;
+    }
+
+   .copyright
+   {
+        display:flex;
+        border-top: 2px solid grey;
+        width:100%;
+   }
+   .container4 p{
+       margin-left:620px;
+   }
+   .container4 a
+   {
+        color:white;
+        text-decoration: none;
+        margin-left: 4px;
+   }
+}
+</style>
+<body>
+    <h1>Content Area</h1>
+    <div class="container" id="a">
+        <div class="about">
+            <h2>ABOUT</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quia deserunt commodi optio maxime magnam earum dolore incidunt reprehenderit, tempora a, iste, nesciunt mollitia laboriosam necessitatibus. Quis corporis commodi officiis quo nisi, qui voluptatibus assumenda officia unde quae doloribus obcaecati necessitatibus perferendis laborum cupiditate quos porro dicta ab consequuntur a?</p>
+        </div>
+        <div class="categories">
+            <h2>CATEGORIES</h2>
+            <ul>
+                <li>C</li>
+                <li>UI Design</li>
+                <li>PHP</li>
+                <li>Java</li>
+                <li>Android</li>
+                <li>Hybrid Apps</li>
+            </ul>
+        </div>
+        <div class="quick_links">
+            <h2>QUICK LINKS</h2>
+            <ul>
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>Contribute</li>
+                <li>Privacy policy</li>
+                <li>Sitemap</li>
+                <li>Disclaimer</li>
+            </ul>
+        </div>
+        <div class="Contact_us">
+            <h2>CONTACT US</h2>
+            <ul>
+                <li>77 kothi meena bazar</li>
+                <li>vani.jain_cs19@gla.ac.in</li>
+                <li>8630128300</li>
+                <li>vanijain</li>
+            </ul>
+
+        </div>
+        </div>
+        <div class="container2">
+            <div class="Registration">
+                <h1>Register for free</h1>
+                <div class="mybutton">
+                    <a href="/images/fullstack_image.jpg">signup!</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="container3">
+            <div class="icons"  id="icon1">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div  class="icons" id="icon2">
+                <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div  class="icons" id="icon3">
+                <a href="https://developers.google.com/web/showcase/2015/googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div  class="icons" id="icon4">
+                <a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </div>
+            </div>
+        </div>
+        <div class="container4">
+            <div class="copyright">
+            <p><i class="fa fa-copyright" aria-hidden="true"></i> 2020 Copyright:<a href="https://mdbootstrap.com/">MDBootstap.com</a></p>
+            </div>
+        </div>
+</body>
+</html>
