@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        body {
+            background-color: rgb(0, 81, 128);
+        }
+
+        .box {
+            height: 670px;
+            width: 400px;
+            background-color: white;
+            border-radius: 10px;
+
+
+        }
+
+        .create_account {
+            background-color: rgb(243, 234, 234);
+            height: 70px;
+            padding-top: 10px;
+            border-radius: 10px;
+
+
+        }
+
+        h1 {
+            color: rgba(8, 7, 7, 0.884);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        label {
+            margin-left: 30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        input[type=text] {
+            margin-left: 30px;
+            margin-top: 20px;
+            width: 320px;
+            height: 30px;
+        }
+
+        input[type=Email] {
+            margin-left: 30px;
+            margin-top: 20px;
+            width: 320px;
+            height: 30px;
+        }
+
+        input[type=Password] {
+            margin-left: 30px;
+            margin-top: 20px;
+            width: 320px;
+            height: 30px;
+        }
+
+        button {
+            width: 320px;
+            height: 40px;
+            margin-left: 30px;
+            background-color: blueviolet;
+            color: whitesmoke;
+        }
+
+        .formstyle input:focus {
+            outline: 0;
+            border: 2px solid black;
+        }
+
+        .formstyle.success input {
+            border: 2px solid green;
+        }
+
+        .formstyle.error input {
+            border: 2px solid red;
+        }
+
+        .formstyle {
+            position: relative;
+        }
+
+        .formstyle i {
+            position: absolute;
+            right: 52px;
+            margin-top: 29px;
+            visibility: hidden;
+        }
+
+        .formstyle h5 {
+            visibility: hidden;
+            color: red;
+        }
+
+        .formstyle.error h5 {
+            visibility: visible;
+        }
+
+        .formstyle.success i.fa-check-circle {
+            color: rgb(44, 211, 44);
+            visibility: visible;
+        }
+
+        .formstyle.error i.fa-exclamation {
+            color: red;
+            visibility: visible;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+</head>
+
+<body>
+    <div class="box" id="box1">
+        <div class="create_account">
+            <h1>Create Account</h1>
+        </div>
+        <form class="form" id="form">
+            <div class="formstyle">
+                <label>Username</label><br>
+                <input type="text" name="" id="username" placeholder="Enter your name">
+                <i class="fa fa-exclamation"></i>
+                <i class="fa fa-check-circle"></i>
+                <h5 style="margin-top: 0px;margin-left: 28px;">Error Msg</h5>
+            </div>
+            <div class="formstyle">
+
+                <br><label>Email</label>
+                <input type="Email" name="" id="email" placeholder="Enter your enail">
+                <i class="fa fa-exclamation"></i>
+                <i class="fa fa-check-circle"></i>
+                <h5 style="margin-top: 0px;margin-left: 28px;">Error Msg</h5>
+            </div>
+            <div class="formstyle">
+
+                <br><label>Password</label>
+                <input type="Password" name="" id="password" placeholder="Enter Password">
+                <i class="fa fa-exclamation"></i>
+                <i class="fa fa-check-circle"></i>
+                <h5 style="margin-top: 0px;margin-left: 28px;">Error Msg</h5>
+            </div>
+            <div class="formstyle">
+
+                <br><label>Password Again</label>
+                <input type="Password" name="" id="cpassword" placeholder="Confirm Password">
+                <i class="fa fa-exclamation"></i>
+                <i class="fa fa-check-circle"></i>
+                <h5 style="margin-top: 0px;margin-left: 28px;">Error Msg</h5>
+            </div>
+            <button class="submit">Submit</button>
+        </form>
+
+    </div>
+    </div>
+    <script type="text/javascript">
+
+        var form, username, email, password, cpassword;
+        form = document.getElementById('form');
+        username = document.getElementById('username');
+        email = document.getElementById('email');
+        password = document.getElementById('password');
+        cpassword = document.getElementById('cpassword');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            validate();
+        })
+
+        
+        const isEmail = (emailVal) => {
+            var atSymob = emailVal.indexOf("@");
+            if (atSymob < 1) return false;
+            var dot = emailVal.lastIndexOf('.')
+            if (dot <= atSymob + 3) return false;
+            if (dot == email.length - 1) return false;
+            return true;
+
+        }
+        const validate = () => {
+            const usernameVal = username.value.trim();
+            const emailVal = email.value.trim();
+            const passwordVal = password.value.trim();
+            const cpasswordVal = cpassword.value.trim();
+
+
+
+
+            if (usernameVal === "") {
+                setErrorMsg(username, 'username cannot be blank');
+            }
+            else if (usernameVal.length <= 2) {
+                setErrorMsg(username, 'username min 3 char');
+            }
+            else {
+                setSuccessMsg(username);
+            }
+                //email
+            if (emailVal === "") {
+                setErrorMsg(email, 'email is not valid');
+            }
+            else if(emailVal.length<=3)
+            {
+                setErrorMsg(email,'email is not valid');
+            }
+            else if (!isEmail(emailVal)) {
+                setErrorMsg(email, 'email not valid');
+            }
+            else {
+                setSuccessMsg(email);
+            }
+            //password
+
+            if(passwordVal==="")
+            {
+                setErrorMsg(password,"password cannot be blank");
+            }
+            else if(passwordVal.length<=4)
+            {
+                setErrorMsg(password,"Min char 5");
+            }
+            else{
+                setSuccessMsg(password);
+            }
+
+            if(passwordVal!=cpasswordVal)
+            {
+                setErrorMsg(cpassword,"password1 does not match");
+            }
+            else if(cpasswordVal==="")
+            {
+                setErrorMsg(cpassword,"password2 cannot be blank")
+            }
+            else{
+                setSuccessMsg(cpassword);
+            }
+            successMsg();
+
+        }
+            function setErrorMsg(input, errormsgs) {
+                const formstyle = input.parentElement;
+                const h5 = formstyle.querySelector('h5');
+                formstyle.className = "formstyle error";
+                h5.innerText = errormsgs;
+            }
+            function setSuccessMsg(input) {
+                const formstyle = input.parentElement;
+                formstyle.className = "formstyle success";
+            }
+
+        
+
+    </script>
+
+</body>
+
+</html>
